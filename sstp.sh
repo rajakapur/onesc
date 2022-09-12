@@ -1,5 +1,5 @@
 #!/bin/bash
-MYIP=$(wget -qO- icanhazip.com);
+clear
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
