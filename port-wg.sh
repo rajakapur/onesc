@@ -2,7 +2,7 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
+clear
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 echo "Checking VPS"
 clear
