@@ -3,7 +3,7 @@
 # ====================================
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edussh-nontls https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/proxy-template.py
+wget -q -O /usr/local/bin/edussh-nontls https://raw.githubusercontent.com/rajakapur/onesc/main/proxy-template.py
 chmod +x /usr/local/bin/edussh-nontls
 
 # Installing Service
@@ -35,7 +35,7 @@ systemctl restart edussh-nontls
 # =================================
 
 # Getting Ovpn Ws Template
-wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/edu-op.py
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/rajakapur/onesc/main/edu-op.py
 chmod +x /usr/local/bin/edu-ovpn
 
 # Installing Service Ovpn Websocket

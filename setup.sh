@@ -30,7 +30,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/rajakapur/special-ip/main/special-ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/rajakapur/registip/main/registip | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 clear
 echo -e  "═══════════════════════════════════════════════════════════"
@@ -60,20 +60,20 @@ mkdir /var/lib/premium-script;
 echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget http://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget http://raw.githubusercontent.com/rajakapur/onesc/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/rajakapur/onesc/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -98,7 +98,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://raw.githubusercontent.com/rajakapur/ScriptBuruk/main/set.sh"
+wget -O /etc/set.sh "https://raw.githubusercontent.com/rajakapur/onesc/main/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
